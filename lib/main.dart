@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myweb/helper/provider/body_provider.dart';
 import 'package:myweb/helper/provider/menu_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -9,6 +10,7 @@ void main() {
     MultiProvider(
       providers: [
         ChangeNotifierProvider<MenuProvider>(create: (_) => MenuProvider()),
+        ChangeNotifierProvider<BodyProvider>(create: (_) => BodyProvider()),
       ],
       child: MyApp(),
     ),
